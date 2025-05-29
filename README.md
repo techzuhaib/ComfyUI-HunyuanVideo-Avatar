@@ -75,9 +75,9 @@ pip install gradio==3.39.0 diffusers==0.33.0 transformers==4.41.2
 
 ## Model
 
-### Download pretrained checkpoint
+### Download Pretrained Models
 
-#### Download Pretrained Models
+HunyuanVideo-Avatar Pretrained [Models](https://huggingface.co/tencent/HunyuanVideo-Avatar)
 
 All models are stored in `ComfyUI/models/HunyuanVideo-Avatar/weights` by default, and the file structure is as follows
 
@@ -106,7 +106,7 @@ HunyuanVideo-Avatar
   │  │  ├──...
 ```
 
-#### Download HunyuanVideo-Avatar model
+### Download HunyuanVideo-Avatar model
 
 To download the HunyuanCustom model, first install the huggingface-cli. (Detailed instructions are available [here](https://huggingface.co/docs/huggingface_hub/guides/cli).)
 
