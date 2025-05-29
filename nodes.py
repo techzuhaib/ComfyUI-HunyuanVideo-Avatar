@@ -162,8 +162,6 @@ class HunyuanVideoAvatar:
     CATEGORY = "HunyuanVideo-Avatar"
 
     def generate(self, model, input, sample-n-frames, seed, image-size, cfg-scale, infer-steps, use-deepcache, flow-shift-eval-video, save-path):
-
-        
     
         main(model, input, sample-n-frames, seed, image-size, cfg-scale, infer-steps, use-deepcache, flow-shift-eval-video, save-path)
         
