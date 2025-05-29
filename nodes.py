@@ -16,7 +16,7 @@ from transformers import WhisperModel
 from transformers import AutoFeatureExtractor
 
 
-MODEL_OUTPUT_PATH = os.environ.get('MODEL_BASE')
+MODEL_OUTPUT_PATH = "./weights"
 
 
 def main():
@@ -100,8 +100,6 @@ def main():
             os.system(f"ffmpeg -i '{output_path}' -i '{audio_path}' -shortest '{output_audio_path}' -y -loglevel quiet; rm '{output_path}'")
 
 
-
-
 class LoadAvatarModel:
     @classmethod
     def INPUT_TYPES(s):
@@ -119,9 +117,57 @@ class LoadAvatarModel:
     def input_model(self, model_path):
         model = model_path
         return (model,)
+
+
+class LoadAvatarInput:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "input_path": ("STRING", {"default": "assets/test.csv"}),
+            }
+        }
+
+    RETURN_TYPES = ("INPUT",)
+    RETURN_NAMES = ("input",)
+    FUNCTION = "input_avatar"
+    CATEGORY = "HunyuanVideo-Avatar"
+
+    def input_avatar(self, input_path):
+        input = input_path
+        return (input,)
+
+
+class HunyuanVideoAvatar:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "model": ("MODEL",),
+                "input": ("INPUT",),
+                "sample-n-frames": ("CONFIG",),
+                "seed": ("INT", {"default": 128}),
+                "image-size": ("INT", {"default": 704}),
+                "cfg-scale": ("FLOAT", {"default": 7.5}),
+                "infer-steps": ("INT", {"default": 50}),
+                "use-deepcache": ("INT", {"default": 1}),
+                "flow-shift-eval-video": ("FLOAT", {"default": 5.0}),
+                "save-path": ("STRING", {"default": "./results-single"}),
+            }
+        }
+
+    RETURN_TYPES = ("VIDEO",)
+    RETURN_NAMES = ("final_frames",)
+    FUNCTION = "generate"
+    CATEGORY = "HunyuanVideo-Avatar"
+
+    def generate(self, model, input, sample-n-frames, seed, image-size, cfg-scale, infer-steps, use-deepcache, flow-shift-eval-video, save-path):
+
         
     
-    
+        main(model, input, sample-n-frames, seed, image-size, cfg-scale, infer-steps, use-deepcache, flow-shift-eval-video, save-path)
+        
+        return ( ) 
     
     
     
