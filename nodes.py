@@ -156,8 +156,7 @@ class HunyuanVideoAvatar:
             }
         }
 
-    RETURN_TYPES = ("VIDEO",)
-    RETURN_NAMES = ("final_frames",)
+    RETURN_TYPES = ()
     FUNCTION = "generate"
     CATEGORY = "HunyuanVideo-Avatar"
 
