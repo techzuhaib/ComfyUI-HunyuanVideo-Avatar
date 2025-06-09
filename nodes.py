@@ -174,10 +174,5 @@ NODE_CLASS_MAPPINGS = {
     "HunyuanVideoAvatar": HunyuanVideoAvatar,
 }
 
-__all__ = [
-    "LoadAvatarModel",
-    "LoadAvatarInput",
-    "HunyuanVideoAvatar",
-]
     
     
