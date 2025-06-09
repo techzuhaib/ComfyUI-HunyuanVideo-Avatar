@@ -166,6 +166,18 @@ class HunyuanVideoAvatar:
         
         return ( ) 
     
-    
+    # ...rest of your code...
+
+NODE_CLASS_MAPPINGS = {
+    "LoadAvatarModel": LoadAvatarModel,
+    "LoadAvatarInput": LoadAvatarInput,
+    "HunyuanVideoAvatar": HunyuanVideoAvatar,
+}
+
+__all__ = [
+    "LoadAvatarModel",
+    "LoadAvatarInput",
+    "HunyuanVideoAvatar",
+]
     
     
